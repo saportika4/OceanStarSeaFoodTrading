@@ -860,6 +860,7 @@ body.js_nav .mobile_menu_wrapper, html[data-menu=leftmenu] body.js_nav .mobile_m
 	transform: translate(0px, 0px);
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
+	z-index: 1000;
 }
 
 #close_mobile_menu:hover
