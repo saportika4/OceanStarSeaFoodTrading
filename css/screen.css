@@ -994,9 +994,9 @@ body.js_nav #overlay_background
 {
 	visibility: visible;
 	opacity: 1;
-	-webkit-transform: translate(-400px, 0px);
-	-moz-transform: translate(-400px, 0px);
-	transform: translate(-400px, 0px);
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
 }
 
 #overlay_background.visible
