@@ -78,9 +78,9 @@
                 </li>
                 <li class="menu-item"><a href="products.html">PRODUCTS</a>
                 </li>
-                <li class="menu-item"><a href="facility.html">FACILITY</a>
+                <li class="menu-item"><a href="resources.html">RESOURCES</a>
                 </li>
-                <li class="menu-item"><a href="policy.html">QUALITY POLICY</a>
+                <li class="menu-item"><a href="gallery.html">GALLERY</a>
                 </li>
                 <li class="menu-item current-menu-item"><a href="contact-us.html">CONTACT US</a>
                 </li>
@@ -200,9 +200,9 @@
                                         </li>
                                         <li class="menu-item"><a href="products.html">PRODUCTS</a>
                                         </li>
-                                        <li class="menu-item"><a href="facility.html">FACILITY</a>
+                                        <li class="menu-item"><a href="resources.html">RESOURCES</a>
                                         </li>
-                                        <li class="menu-item"><a href="policy.html">QUALITY POLICY</a>
+                                        <li class="menu-item"><a href="gallery.html">GALLERY</a>
                                         </li>
                                         <li class="menu-item current-menu-item"><a href="contact-us.html">CONTACT US</a>
                                         </li>
@@ -355,7 +355,7 @@
                                 <div id="reponse_msg_1570105835359928382" class="contact_form_response">
                                     <ul></ul>
                                 </div>
-                                <form class="quform" action="plugins/quform/process.php" method="post" enctype="multipart/form-data" onclick="">
+                                <form class="quform" id="my-form" action="https://formspree.io/f/xyyazpzb" method="post" enctype="multipart/form-data">
 
                                     <div class="quform-elements">
                                         <div class="quform-element">
@@ -377,6 +377,23 @@
                                         <div class="quform-element">
                                             
                                                 <br>
+                                                <span class="wpcf7-form-control-wrap your-email">
+                                                    <input id="Number" type="number" name="Number" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Number*">
+                                                    
+                                                </span> 
+                                            
+                                        </div>
+                                        <div class="quform-element">
+                                            
+                                            <br>
+                                            <span class="wpcf7-form-control-wrap your-name">
+                                                <input id="address" type="text" name="address" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Address*">
+                                            </span> 
+                                        
+                                    </div>
+                                        <div class="quform-element">
+                                            
+                                                <br>
                                                 <span class="wpcf7-form-control-wrap your-message">
                                                     <textarea  id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
                                                 </span>
@@ -386,14 +403,15 @@
                                         <!-- Begin Submit button -->
                                         <div class="quform-submit">
                                             <div class="quform-submit-inner">
-                                                <button type="submit" class="submit-button"><span>Send</span></button>
+                                                <button id="my-form-button" type="submit" class="submit-button"><span>Send</span></button>
                                             </div>
                                             <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
                                         </div>
-                                        
+                                            <p id="my-form-status" style="margin-top: 15px; font-weight: 700;"></p>
                                     </div>
                                 </form>
                             </div>
+                            <!-- <div id="ajaxsuccess">Successfully sent!!</div> -->
                             <br class="clear" />
                         </div>
                     </div>
@@ -499,9 +517,9 @@
                         </li>
                         <li class="menu-item"><a href="products.html">PRODUCTS</a>
                         </li>
-                        <li class="menu-item"><a href="facility.html">FACILITY</a>
+                        <li class="menu-item"><a href="resources.html">RESOURCES</a>
                         </li>
-                        <li class="menu-item"><a href="policy.html">QUALITY POLICY</a>
+                        <li class="menu-item"><a href="gallery.html">GALLERY</a>
                         </li>
                         <li class="menu-item"><a href="contact-us.html">CONTACT US</a>
                         </li>
@@ -556,6 +574,41 @@
     <script src='js/plugins/script-map.js'></script>
     <script src="js/plugins/quform/js/plugins.js"></script>
     <script src="js/plugins/quform/js/scripts.js"></script>  
+
+    <!-- form ajax -->
+
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Send Successfully!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 
 </body>
 </html>
