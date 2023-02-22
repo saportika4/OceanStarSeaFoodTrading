@@ -1060,6 +1060,6 @@ html[data-menu=leftmenu] #wrapper
 
 @media(max-width:350px) {
     .home_main_head {
-        font-size: 18px;
+        font-size: 24px;
     }
 }
