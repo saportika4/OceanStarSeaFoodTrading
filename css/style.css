@@ -1033,3 +1033,33 @@ html[data-menu=leftmenu] #wrapper
 .justify {
     text-align: justify;
 }
+
+.home_main_head {
+    font-size: 50px;
+    word-spacing: 7px;
+}
+
+@media(max-width:950px) {
+    .home_main_head {
+        font-size: 35px;
+        padding-bottom: 10px;
+    }
+}
+
+@media(max-width:660px) {
+    .home_main_head {
+        font-size: 28px;
+    }
+}
+
+@media(max-width:450px) {
+    .home_main_head {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:350px) {
+    .home_main_head {
+        font-size: 18px;
+    }
+}
