@@ -1037,6 +1037,9 @@ html[data-menu=leftmenu] #wrapper
 .home_main_head {
     font-size: 50px;
     word-spacing: 7px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 @media(max-width:950px) {
