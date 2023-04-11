@@ -622,7 +622,7 @@ body.admin-bar:not(.js_nav) .header_style_wrapper
 {
 	background: transparent;
 	background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.3) 35%, transparent 97%, transparent 0%);
-	/* background: linear-gradient(to bottom, #000000bf, #000000d9); */
+	background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1));
 	border: 0;
 	box-shadow: 0 0 0;
 }
@@ -1089,7 +1089,7 @@ body.js_nav #overlay_background
 
 .top_bar.fullscreen_video #menu_wrapper div .nav > li > a, .top_bar.fullscreen_video i, .top_bar.fullscreen_video #searchform label, .top_bar.hasbg #menu_wrapper div .nav > li > a, .top_bar.hasbg i, .top_bar.hasbg .top_contact_info, .top_bar.hasbg .top_contact_info a, .top_bar.hasbg .top_contact_info a:hover, .top_bar.hasbg .top_contact_info a:active
 {
-	color: #fff !important;
+	color: #fff;
 }
 
 #menu_wrapper .nav li.arrow > a:after, #menu_wrapper div .nav li.arrow > a:after

@@ -356,13 +356,13 @@ body,
     #menu_wrapper .nav ul li a:hover,
     #menu_wrapper div .nav li a.hover,
     #menu_wrapper div .nav li a:hover {
-        color: #cfa670;
+        color: #cfa670 !important;
     }
     
     #menu_wrapper div .nav > li.current-menu-item > a,
     #menu_wrapper div .nav > li.current-menu-parent > a,
     #menu_wrapper div .nav > li.current-menu-ancestor > a {
-        color: #cfa670;
+        color: #cfa670 !important;
     }
     
     .top_bar {
