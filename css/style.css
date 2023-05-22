@@ -1068,7 +1068,7 @@ html[data-menu=leftmenu] #wrapper
 }
 
 .text_anim {
-    margin-top: 400px;
+    margin-top: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1083,8 +1083,8 @@ h1 {
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     color: white;
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 45px;
+    font-weight: 900;
   }
   @keyframes scale {
     100% {
