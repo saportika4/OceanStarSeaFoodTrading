@@ -1077,7 +1077,7 @@ html[data-menu=leftmenu] #wrapper
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 h1 {
-    /* font-family: "Montserrat Medium"; */
+    font-family: "Montserrat Medium";
     max-width: 40ch;
     text-align: center;
     transform: scale(0.94);
